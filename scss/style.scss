@@ -1,0 +1,301 @@
+@import "colors.scss";
+@import "basicstuff.scss";
+@font-face {
+    font-family: "Quartz";
+    src: url(../font/Quartz.ttf);
+  }
+  body {
+    background-color: $white;
+  }
+  header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: $white;
+    background-color: #333;
+    font-family: Quartz;
+    font-weight: bold;
+    a {
+        color: $white;
+        text-decoration: none;
+        font-size: 1.7em;
+        margin: 0 1em;
+      }
+      nav {
+        margin: 2em;
+      }
+      h1 {
+        letter-spacing: 25px;
+        margin: 1em;
+      }
+  }
+  main {
+    background-color: $white;
+  }
+  section {
+    border: #333 1px solid;
+  }
+  footer {
+    display: flex;
+    justify-content: space-around;
+    font-family: "Quartz";
+    font-weight: 600;
+    font-size: 1.5em;
+    padding: 1em;
+  }
+  #mainimgdiv {
+    position: relative;
+    display: inline-block;
+    font-size: 1rem;
+    color: $white;
+    font-family: Quartz;
+    width: 100%;
+    h1 {
+        position: absolute;
+        top: 35%;
+        bottom: 65%;
+        left: 3%;
+        font-size: 3em;
+      }
+  }
+  #mainimg {
+    display: block;
+    width: 100%;
+  }
+  #nabidka-article {
+    font-size: 3em;
+    font-family: Quartz;
+    text-align: center;
+    padding: 1em;
+  }
+  .article-h1 {
+    letter-spacing: 25px;
+    margin-top: 0;
+    margin-bottom: 1em;
+    text-align: center;
+  }
+  #nabidka-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    section {
+        margin: 0 1em;
+        transition: all 0.3s ease-out;
+        cursor: pointer;
+    }
+    section:hover {
+        transform: scale(1.1);
+    }
+  }
+  #nabidka-section-text {
+    margin: 0.5em;
+    h1 {
+        font-size: 0.7em;
+    }
+    p {
+        font-size: 0.5em;
+    }
+  }
+  #o-nas-article {
+    font-family: "Quartz";
+    background-color: #333;
+    color: $white;
+    padding: 1em;
+    font-size: 3em;
+    p {
+        font-size: 0.8em;
+    }
+  }
+  #o-nas-section {
+    > section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    article {
+        text-align: right;
+        align-self: center;
+    }
+  } 
+  #akce-article {
+    font-family: "Quartz";
+    font-size: 3em;
+    padding: 1em;
+  }
+  #akce-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    section {
+        color: $white;
+        background-color: #333;
+        text-align: center;
+        padding: 0.5em;
+        img {
+            width: 5em;
+            margin: 0.2em 0;
+        }
+        h5 {
+            color: #aaa;
+        }
+        h5:hover {
+            color: $white;
+            cursor: pointer;
+        }
+        h6 {
+            font-size: 0.5em;
+            padding: 0.8em 0;
+        }
+    }
+  } 
+  #kontakt-article {
+    color: $white;
+    font-family: "Quartz";
+    font-size: 3em;
+    padding: 1em;
+    background-color: #333;
+    text-align: center;
+  }
+  #kontakt-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: none;
+      }
+  }
+  .kontakt-class {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 90%;
+    font-size: 0.5em;
+    padding: 0.5em;
+    margin: 0.5em 0;
+  }
+  #kontakt-text {
+    display: flex;
+    align-items: flex-start;
+    height: 10em;
+    ::placeholder {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+  }
+  #kontakt-submit {
+    cursor: pointer;
+    background-color: #222;
+    color: $white;
+    transition: all 0.2s ease-out;
+  }
+  #kontakt-submit:hover {
+    background-color: #444;
+  }
+  #kontakt-section-adresa {
+    display: flex;
+    justify-self: center;
+    width: 9.4em;
+    h6 {
+        font-size: 0.5em;
+    }
+    iframe {
+        width: 80vh;
+        height: 8em;
+    }
+  }
+  footer a {
+    color: #555;
+  }
+  footer a:hover {
+    color: #000;
+  }
+  
+  @media screen and (max-width: 1550px) {
+    #kontakt-section-adresa iframe {
+      width: 70vh;
+    }
+  }
+  
+  @media screen and (max-width: 1460px) {
+    #mainimgdiv h1 {
+      font-size: 2.5em;
+    }
+    #kontakt-section-adresa iframe {
+      width: 70vh;
+    }
+    #o-nas-section img {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 1390px) {
+    #kontakt-section-adresa iframe {
+      width: 60vh;
+    }
+  }
+  
+  @media screen and (max-width: 1250px) {
+    header nav {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 1230px) {
+    #kontakt-section-adresa iframe {
+      width: 50vh;
+    }
+  }
+  
+  @media screen and (max-width: 1130px) {
+    #mainimgdiv h1 {
+      font-size: 2em;
+    }
+    #nabidka-section {
+      flex-direction: column;
+      section {
+        margin: 0.4em 0;
+      }
+    }
+    #akce-section {
+      flex-direction: column;
+      section {
+        margin: 0.4em 0;
+      }
+    }
+    #kontakt-section-adresa iframe {
+      width: 50vh;
+    }
+  }
+  
+  @media screen and (max-width: 1050px) {
+    #mainimgdiv h1 {
+      font-size: 1.5em;
+    }
+    #kontakt-section {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+    #kontakt-section-adresa iframe {
+      width: 40vh;
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .article-h1 {
+      font-size: 1em;
+    }
+    .kontakt-class {
+      width: 80%;
+      font-size: 0.5em;
+    }
+    #nabidka-section section {
+      transform: scale(0.8);
+      margin: 0;
+    }
+  }
+  
